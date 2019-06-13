@@ -1,0 +1,360 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*Фон*/
+.intro {
+    display: flex; /*меняет располодение текста от столбцом, в строчку.*/
+    flex-direction: column;
+    justify-content: center;
+    
+    background: url("../images/intro_01.jpg") center
+    no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.intro_inner {
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+    
+    text-align: center;
+}
+
+.intro_suptitle {
+    margin-bottom: 35px; /*отстум от загаловка*/
+    font-size: 72px;
+    color: #fff;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.intro_title {
+    color: #fff;
+    font-size: 150px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+}
+/*белая полоска под надписью*/
+.intro_title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 73px auto 50px;
+    
+    background-color: #fff;
+    
+}
+
+/*Шапка Header*/
+.header {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    padding-top: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo {
+    
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.nav {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.dnav_link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px; 
+    position: relative;
+    
+    color: #fff;
+    
+    text-decoration: none;
+    transition: color .2s linear; 
+}
+
+/* Начало блока. подчеркивание под разделами шапки*/
+.dnav_link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    display: none;
+    
+    background-color: #ffcc99;
+    
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.dnav_link:hover {
+    color: #ffcc99;
+}
+
+.dnav_link:hover:after {
+    display: block;
+}
+/*Конец блока. подчеркивание под разделами шапки*/
+
+/*>>>>> добавим кнопку под заголовком*/
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 30px; /*отстум полей рамки от текста полей сверху, снизу, слева, справа*/
+    
+    border: 3px solid #fff; /*Рамка*/
+    
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase; /*Все буквы заглавные*/
+    text-decoration: none; /*убираем подчеркивание под текстом в кнопке*/
+    
+    transition: background .1s linear, color .1s linear; /*Плавночть изменения кнопки*/
+}
+
+.btn:hover { /*эффект при наводе*/
+    background-color: #fff; /*цвет фона*/
+    color: #333; /*цвет текста*/
+}
+
+
+/* >>>>> блок для слайдера*/
+.slider {
+    width: 100%;
+    
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    z-index: 1;
+}
+
+.slider_inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider_item {
+    width: 24%;
+    padding: 20px 0; 
+    position: relative; /*Добавление красной полоски на активном слайде. Эта команда                                позволяет позиционироват ту полоск обсалютно относительно 
+                            элемента на котором она появится*/
+    
+    border-top: 3px solid #fff; /*полоска сверху над текстом*/
+    opacity: .7; /*прозрачность элементов*/
+    
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase; /*заглавные буквы*/
+}
+.slider_num {
+    font-size: 24px; /*размер шрифта*/
+    font-weight: 700; /*жирность шрифта*/
+}
+
+.slider_item.activ {
+    opacity: 1; /*прозрачность элемента*/
+}
+
+.slider_item.activ:before { /*задаем, что у активного элемента появляется полоска*/
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    
+    background-color: #ff9999;
+    
+    position: absolute;
+    top: -3px;
+    left: 0;
+    z-index: 1;
+}
+
+
+/* >>>> Секция. Здесь будут нахдиться стили для самой секции, для шапки и заголовков*/
+.section {
+    padding: 80px 0px; /*Поля вокруг всей секции*/
+}
+
+.section_header {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 40px; /*Отступ текста и заголовков и картинок*/
+    
+    text-align: center; /*Выравнивание текста по центру*/
+}
+
+.section_suptitle {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    color: #333;
+    
+}
+.section_title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.section_title:after { /*Псевдо элемент для полоски*/
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 40px auto 48px;
+    
+    background-color: #ff9999;
+}
+
+.section_text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #999;
+}
+
+
+/* >>> РАЗДЕЛ about. В нем картинки под текстом в общей секции*/
+.about {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between; /*чтобы раздвинуть блоки (картики) друг от друга*/
+    
+}
+
+
+
+.about_item {
+    width: 380px; /*ширина для картинок*/
+    
+    background-color: #99cccc; /*свет фона, которые останется после смещения картинки*/
+    position: relative; /*позиционирование каринки относительно исходного места*/
+    
+}
+
+/*Сбвигаем картинки*/
+.about_item:hover .about_img {
+    transform: translate3d(-10px, -10px, 0); /*Смещение (ось Х ось У ось Z*/
+}
+
+
+/*При наводе на картинку, должна затеняться картинка, которая находится в теге about_img*/
+.about_item:hover .about_img img{ /*для этого добавляем препроцессор */
+    opacity: .1; /*затенение*/   
+}
+
+.about_item:hover .about_text { /*При наводе на картинку будет отображаться текст*/
+    opacity: 1;
+}
+
+
+/*Делаем градиент для блокока с картинками*/
+.about_img {
+    background: linear-gradient(to bottom, #ff9999, #ffcc99);
+        
+    transition: transform .1s linear; /*Плавное смещение картинки*/
+}
+
+
+/*пропишем скорость изменения картинки*/
+.about_img img {
+    display: block; /*Привязывает фон затенения к картинке*/
+    transition: opacity .1s linear;
+    
+}
+
+
+/*Текст который буте в самой картинке*/
+.about_text {
+    width: 100%; /*Позиционирование текста относительно ширины картинки*/
+    font-size: 18;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0; /*Текст скрыт, если не наведет курсор на картинку*/
+    
+    position: absolute; /*Текст будет повеерх картинки, относительно класса about_item*/
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    transform: translate3d(0, -50%, 0); 
+    
+    transition: opacity .1s linear;
+}
+
+/*>>>>> Блок для класса statistics*/
+.statistics {
+    background-color: #99cccc;
+}
+
+.stat {
+    display: flex;
+    color: #fff;
+    
+}
+
+.stat_item { 
+    flex:  1 1 0; /*Одинаковые по размеру колонки*/
+    border-left: 1px solid #b5eae0; /*граница левой колонки шириной 1пикс, сплошная, бел.*/
+    text-align: center; /*вывравнивание текста по цетру*/
+    padding: 70px 25px;
+}
+
+.stat_item:last-child { /*граница одной правой колонки*/
+    border-right: 1px solid #b5eae0;
+}
+
+.stat_count {
+    
+    margin-bottom: 10px;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat_text {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/*'SourceCodePro-Medium', ＭＳ ゴシック, 'MS Gothic', monospace*/
