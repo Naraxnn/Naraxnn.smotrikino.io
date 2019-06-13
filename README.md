@@ -1,2 +1,2 @@
-# Naraxnn.smotrikino.io
+# Naraxnn.smotrikino.github.io
 Сайт на чистом HTML и CSS
