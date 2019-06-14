@@ -71,7 +71,7 @@ html, body {
 /* Блок с фильмами*/
 .films_bloсk {
 	text-align: center;
-	margin: 0px 10px;
+	margin-right: 10px;
 }
 
 .films_bloсk img {
