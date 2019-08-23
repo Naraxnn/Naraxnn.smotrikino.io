@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="cookie.js"></script>
+    <script type="text/javascript">
+        var userName;
+        // метод приветствующий пользователя перед загрузкой страницы
+        function greetUser() {
+            if (navigator.cookieEnabled)
+            userName = readCookie("irock_username");
+            if (userName)
+                alert("Привет" + userName + "я скучал по тебе");
+            else
+                alert('Привет!');
+        }
+
+        // Метод взаимодействующий с пользователем
+
+        function touchRock() {
+            if (userName) {
+                alert("Мне приятно ваше внимание! " + userName + " Спасибо вам");
+            } else {
+                userName = prompt("Как вас зовут? ", "Введите здесь свое имя ");
+                if (userName) {
+                    alert("Рад вас видеть " + userName + "!");
+                document.getElementById("rockImg").src = 'img/iRock_2.png';
+                setTimeout("document.getElementById('rockImg').src='img/iRock_1.png';", 1000);
+                if (navigator.cookieEnabled)
+                    writeCookie("irock_username", userName, 5 * 356);
+                else
+                    alert("включите куки");
+                }
+            }
+            document.getElementById("rockImg").src = 'img/iRock_2.png';
+            setTimeout("document.getElementById('rockImg').src='img/iRock_1.png';", 1000);
+        }
+
+        function resizeRock() {
+            document.getElementById("rockImg").style.height = (document.body.clientHeight) * 0.2;
+            document.getElementById("rockImg").style.width = (document.body.clientWidth) * 0.2;
+        }
+
+
+
+        // var x = "1";
+        // var y = "2";
+        // var z = parseInt(x) + parseInt(y);
+        // alert (z);
+    </script>
+</head>
+
+<body onload="resizeRock(); greetUser();" onresize="resizeRock();">
+
+    <div class="iRockMain">
+        <img class="iRockMain_imgRock" id="rockImg" src="img/iRock_1.png" alt="iRock_1" onclick="touchRock();">
+    </div>
+
+</body>
+
+</html>
