@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/bootstrap.css">
+    <link rel="stylesheet" href="style/style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
+</head>
+
+<body>
+
+    <div class="main-section section">
+        <!-- block1 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3">
+                    <h1 class="header">Cialis</h1>
+                </div>
+            </div>
+            <!-- video + button ------------------------------------------------------------>
+            <div class="block1 row">
+                <div class="col-style style-vidoe col-lg-12">
+                    <video class="video" width="100%" height="auto" autoplay="true" muted="muted" loop="true"
+                        type="video/mp4">
+                        <source class="source" src="video/CialisCommercial10sec.mp4">
+                    </video>
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <form action="#order">
+                            <button src="#order" class="btn btn-warning btn-lg btn-block" type="submit">BUY NOW</button>
+                        </form>
+                    </div>
+                </div>
+            </div><!--closed video + button ------------------------------------------------------------>
+        </div>
+
+        <!-- block 2 -->
+        <div class="block2 container">
+            <div class="col-style row">
+                <!-- properties-------------------------------------------------- -->
+                <div class="col-height col-lg-6">
+                    <div class="properties">
+                        <p class="property">Effect after 16 minutes</p>
+                        <p class="property">Valid for 36 hours</p>
+                        <p class="property">Does not increase pressure</p>
+                    </div>
+                </div> <!--closed properties-------------------------------------------------- -->
+
+                <!-- block 3 -->
+                <!-- slider----------------------------------------------------------------- -->
+                <div class="fotoramaStyle col-lg-6">
+                    <div class=" fotorama" 
+                    data-width="100%" 
+                    data-ratio="16/9" 
+                    data-autoplay="true"
+                    data-stopautoplayontouch="false" 
+                    data-fit="cover"
+                    data-nav="false"
+                    >
+                    <div class="slider" data-img="img/111.jpg">
+                        <div class="sliderTextStyle">
+                        <p>A good buy</p>
+                        <p>20 tablets $51.99</p>
+                        </div>
+                    </div>
+                    <div class="slider" data-img="img/222.jpg">
+                        <div class="sliderTextStyle">
+                            <p>Real benefit</p>
+                            <p>one tablet $2.6</p>
+                        </div>
+                    </div>
+                    <div class="slider3" data-img="img/333.jpg">
+                        <div class="sliderTextStyle">
+                            <p>Catch it now</p>
+                        </div>
+                    </div>
+                </div>
+                </div> <!--closed slider--------------------------------------------------------- -->
+            </div>
+        </div>
+
+        <!-- block4 -->
+        <div class="block4 container">
+            <div class="row">
+                <!-- form------------------------------------------------- -->
+                <div id="order" class="col-style-order col-lg-12">
+                    <div class="order col-lg-6 col-lg-offset-3">
+                        <div class="form-group"></div>
+                        <p class="style-order">Order now</p>
+                        <p class="style-order">20mg 20 tablets $51.99</p>
+                        <input id="name" type="text" class="inpit-style form-control" title="Enter your name"
+                            placeholder="Name">
+                        <input id="telephone" type="text" class="inpit-style form-control" title="Enter your phone"
+                            placeholder="Phone">
+                                <!-- Timer --------------------------->
+                                <div class="timer">
+                                    <div class="eTimer"></div>
+                                </div>
+                                <!-- closed timer ------------------------>
+                        <button id="btn-tooltip" src=" #order" class="btn btn-warning btn-lg btn-block"
+                            title="go to the payment" type="submit">BUY NOW</button>
+                    </div>
+                </div> <!-- closed form---------------------------------------------- -->
+            </div>
+        </div>
+    </div>
+
+ 
+
+
+    
+
+
+    
+    <!-- jQuery -->
+    <script src="js/query-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://e-timer.ru/js/etimer.js"></script>
+    <script src="js/timer.js"></script>
+
+    <script>
+        $('#btn-tooltip').tooltip();
+        $('#name').tooltip();
+        $('#telephone').tooltip();
+    </script>
+</body>
+
+</html>
