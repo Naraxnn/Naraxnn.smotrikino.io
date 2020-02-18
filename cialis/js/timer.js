@@ -1,7 +1,7 @@
 jQuery(document).ready(function () {
     jQuery(".eTimer").eTimer({
         etType: 0,
-        etDate: "18.02.2020.0.0",
+        etDate: "6.05.2020.0.0",
         etTitleText: "",
         etTitleSize: 20,
         etShowSign: 1,
