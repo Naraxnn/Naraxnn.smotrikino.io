@@ -1,0 +1,104 @@
+// адаптив для сайта
+@media (max-width: 768px)
+    html
+        font-size: 7px
+        .top-nav
+            &-btn
+                display: block
+            &_menu
+                flex-direction: column
+                display: none
+                &__active
+                    display: flex
+                li
+                    line-height: 2
+                    a
+                        &::after
+                            display: none
+        .left-sidebar
+            &_object
+                display: none
+            &_btn
+                display: block
+            &_menu
+                display: none
+        
+        .directions
+            &-block
+                height: 30rem
+                img
+                    width: 30rem
+                    height: 25rem   
+                    display: inline-block
+                    background-size: cover
+                    background-position: 50%, 50%
+
+        .copy
+            text-align: center
+            small
+                display: block
+                margin: 36px auto
+        
+        .footer
+            &-contacts
+                text-align: right
+
+@media (min-width: 767px) and (max-width: 991px)
+    html
+        font-size: 7px
+        .top-nav
+            &-btn
+                display: block
+            &_menu
+                display: none
+                &__active
+                    display: flex
+                li
+                    line-height: 2
+                    a
+                        &::after
+                            display: none
+
+        .left-sidebar
+            &_object
+                display: none
+            &_btn
+                display: block
+            &_menu
+                display: none
+        
+        .directions
+            &-block
+                height: 30rem
+                img
+                    width: 30rem
+                    height: 25rem   
+                    display: inline-block
+                    background-size: cover
+                    background-position: 50%, 50%
+
+        .copy
+            text-align: center
+            small
+                display: block
+                margin: 36px auto
+        
+        .footer
+            &-contacts
+                text-align: right
+                &_phone
+                    font-size: 16px
+                
+@media (min-width: 993px)
+    .top-nav
+        &_menu
+            display: flex
+            justify-content: space-around
+            li
+                margin: 0
+                padding: 0
+
+    .left-sidebar
+        &_object
+            display: none
+            
